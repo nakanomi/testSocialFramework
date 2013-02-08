@@ -57,6 +57,7 @@ enum {
 	[barButton release];
 	NSLog(@"rc:%d", [activityView retainCount]);
 	[activityView release];
+	isSearchedAccount = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,53 +68,56 @@ enum {
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	ACAccountStore *accountStore = [[ACAccountStore alloc] init];
-	
-	// Create an account type that ensures Twitter accounts are retrieved.
-	ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:strAccountType];
-	
-	[activityView startAnimating];
-	self.title = @"Getting Accounts";
-	
-	// Request access from the user to use their Twitter accounts.
-	[accountStore requestAccessToAccountsWithType:accountType
-							withCompletionHandler:^(BOOL granted, NSError *error) {
-								if (granted) {
-									NSArray *tmpArray = [accountStore accountsWithAccountType:accountType];
-									//Get the list of Twitter account
-									if (tmpArray.count > 0) {
-										dictAccount = [[NSMutableDictionary alloc] init];
-										arrayName = [[NSMutableArray alloc] init];
-										NSLog(@"%s  %d accounts", __PRETTY_FUNCTION__, tmpArray.count);
-										int i;
-										for (i =0; i < tmpArray.count; i++) {
-											ACAccount *account = [tmpArray objectAtIndex:i];
-											NSString *strUserName = [NSString stringWithString:account.username];
-											NSString *strID = [NSString stringWithString:account.identifier];
-											[dictAccount setObject:strID forKey:strUserName];
-											[arrayName addObject:strUserName];
+	if (!isSearchedAccount) {
+		isSearchedAccount = YES;
+		ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+		
+		// Create an account type that ensures Twitter accounts are retrieved.
+		ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:strAccountType];
+		
+		[activityView startAnimating];
+		self.title = @"Getting Accounts";
+		
+		// Request access from the user to use their Twitter accounts.
+		[accountStore requestAccessToAccountsWithType:accountType
+								withCompletionHandler:^(BOOL granted, NSError *error) {
+									if (granted) {
+										NSArray *tmpArray = [accountStore accountsWithAccountType:accountType];
+										//Get the list of Twitter account
+										if (tmpArray.count > 0) {
+											dictAccount = [[NSMutableDictionary alloc] init];
+											arrayName = [[NSMutableArray alloc] init];
+											NSLog(@"%s  %d accounts", __PRETTY_FUNCTION__, tmpArray.count);
+											int i;
+											for (i =0; i < tmpArray.count; i++) {
+												ACAccount *account = [tmpArray objectAtIndex:i];
+												NSString *strUserName = [NSString stringWithString:account.username];
+												NSString *strID = [NSString stringWithString:account.identifier];
+												[dictAccount setObject:strID forKey:strUserName];
+												[arrayName addObject:strUserName];
+											}
+											[self.tableView reloadData];
+											[activityView stopAnimating];
+											self.title = @"Select Account";
 										}
-										[self.tableView reloadData];
-										[activityView stopAnimating];
-										self.title = @"Select Account";
+										else {
+											NSString *strAlert = @"アカウントを取得できません";
+											NSString *strOk = @"Ok";
+											UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@" "
+																							message:strAlert
+																						   delegate:self
+																				  cancelButtonTitle:strOk
+																				  otherButtonTitles:nil,
+																  nil];
+											[alert show];
+											[activityView stopAnimating];
+										}
+										
+										
 									}
-									else {
-										NSString *strAlert = @"アカウントを取得できません";
-										NSString *strOk = @"Ok";
-										UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@" " 
-																						message:strAlert
-																					   delegate:self
-																			  cancelButtonTitle:strOk
-																			  otherButtonTitles:nil,
-															  nil];
-										[alert show];
-										[activityView stopAnimating];
-									}
-									
-									
 								}
-							}
-	 ];
+		 ];
+	}
 }
 
 - (void)viewDidUnload
@@ -164,7 +168,7 @@ enum {
     
     // Configure the cell...
     NSString *strUserName = [arrayName objectAtIndex:indexPath.row];
-	cell.textLabel.text = strUserName;
+	cell.textLabel.text = [NSString stringWithString:strUserName];
     return cell;
 }
 

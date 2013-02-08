@@ -24,6 +24,8 @@ enum {
 	NSMutableDictionary *dictAccount;
 	UIActivityIndicatorView *activityView;
 	
+	BOOL isSearchedAccount;
+	
 	NSString *strAccountType;
 }
 
