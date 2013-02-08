@@ -16,10 +16,6 @@
 		8A97863416C4E55400AC95AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A97863316C4E55400AC95AF /* Default.png */; };
 		8A97863616C4E55400AC95AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A97863516C4E55400AC95AF /* Default@2x.png */; };
 		8A97863816C4E55400AC95AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A97863716C4E55400AC95AF /* Default-568h@2x.png */; };
-		8A97863B16C4E55400AC95AF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97863A16C4E55400AC95AF /* MasterViewController.m */; };
-		8A97863E16C4E55400AC95AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97863D16C4E55400AC95AF /* DetailViewController.m */; };
-		8A97864116C4E55400AC95AF /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97863F16C4E55400AC95AF /* MasterViewController.xib */; };
-		8A97864416C4E55400AC95AF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97864216C4E55400AC95AF /* DetailViewController.xib */; };
 		8A97864B16C4E6CD00AC95AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97864A16C4E6CD00AC95AF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8A97864D16C4E6D600AC95AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97864C16C4E6D600AC95AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8A97865716C4E6FA00AC95AF /* SelectAccountViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A97864F16C4E6FA00AC95AF /* SelectAccountViewController.mm */; };
@@ -44,12 +40,6 @@
 		8A97863316C4E55400AC95AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8A97863516C4E55400AC95AF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8A97863716C4E55400AC95AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8A97863916C4E55400AC95AF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		8A97863A16C4E55400AC95AF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		8A97863C16C4E55400AC95AF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		8A97863D16C4E55400AC95AF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		8A97864016C4E55400AC95AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
-		8A97864316C4E55400AC95AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		8A97864A16C4E6CD00AC95AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8A97864C16C4E6D600AC95AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		8A97864E16C4E6FA00AC95AF /* SelectAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAccountViewController.h; sourceTree = "<group>"; };
@@ -122,12 +112,6 @@
 				8A97865616C4E6FA00AC95AF /* ViewController.xib */,
 				8A97863016C4E55400AC95AF /* AppDelegate.h */,
 				8A97863116C4E55400AC95AF /* AppDelegate.m */,
-				8A97863916C4E55400AC95AF /* MasterViewController.h */,
-				8A97863A16C4E55400AC95AF /* MasterViewController.m */,
-				8A97863C16C4E55400AC95AF /* DetailViewController.h */,
-				8A97863D16C4E55400AC95AF /* DetailViewController.m */,
-				8A97863F16C4E55400AC95AF /* MasterViewController.xib */,
-				8A97864216C4E55400AC95AF /* DetailViewController.xib */,
 				8A97862816C4E55400AC95AF /* Supporting Files */,
 			);
 			path = testSocialFramework;
@@ -202,8 +186,6 @@
 				8A97863416C4E55400AC95AF /* Default.png in Resources */,
 				8A97863616C4E55400AC95AF /* Default@2x.png in Resources */,
 				8A97863816C4E55400AC95AF /* Default-568h@2x.png in Resources */,
-				8A97864116C4E55400AC95AF /* MasterViewController.xib in Resources */,
-				8A97864416C4E55400AC95AF /* DetailViewController.xib in Resources */,
 				8A97865816C4E6FA00AC95AF /* SelectAccountViewController.xib in Resources */,
 				8A97865A16C4E6FA00AC95AF /* TweetViewController.xib in Resources */,
 				8A97865C16C4E6FA00AC95AF /* ViewController.xib in Resources */,
@@ -219,8 +201,6 @@
 			files = (
 				8A97862E16C4E55400AC95AF /* main.m in Sources */,
 				8A97863216C4E55400AC95AF /* AppDelegate.m in Sources */,
-				8A97863B16C4E55400AC95AF /* MasterViewController.m in Sources */,
-				8A97863E16C4E55400AC95AF /* DetailViewController.m in Sources */,
 				8A97865716C4E6FA00AC95AF /* SelectAccountViewController.mm in Sources */,
 				8A97865916C4E6FA00AC95AF /* TweetViewController.mm in Sources */,
 				8A97865B16C4E6FA00AC95AF /* ViewController.mm in Sources */,
@@ -236,22 +216,6 @@
 				8A97862B16C4E55400AC95AF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8A97863F16C4E55400AC95AF /* MasterViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A97864016C4E55400AC95AF /* en */,
-			);
-			name = MasterViewController.xib;
-			sourceTree = "<group>";
-		};
-		8A97864216C4E55400AC95AF /* DetailViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A97864316C4E55400AC95AF /* en */,
-			);
-			name = DetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
