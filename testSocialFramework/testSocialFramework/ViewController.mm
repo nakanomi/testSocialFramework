@@ -23,7 +23,7 @@ const float alphaOfDisable = 0.3f;
 const float alphaOfEnable = 1.0f;
 
 //短縮URLだと投稿に失敗する？らしい
-#define TWITTER_URL_ENG	@"https://itunes.apple.com/us/app/smart-room/id534881295"
+#define TWITTER_URL_ENG	@"http://apple.com/"
 
 #pragma mark -viewcontroller
 - (void)viewDidLoad
