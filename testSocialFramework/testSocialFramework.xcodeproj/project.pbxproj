@@ -20,6 +20,14 @@
 		8A97863E16C4E55400AC95AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97863D16C4E55400AC95AF /* DetailViewController.m */; };
 		8A97864116C4E55400AC95AF /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97863F16C4E55400AC95AF /* MasterViewController.xib */; };
 		8A97864416C4E55400AC95AF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97864216C4E55400AC95AF /* DetailViewController.xib */; };
+		8A97864B16C4E6CD00AC95AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97864A16C4E6CD00AC95AF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8A97864D16C4E6D600AC95AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97864C16C4E6D600AC95AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8A97865716C4E6FA00AC95AF /* SelectAccountViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A97864F16C4E6FA00AC95AF /* SelectAccountViewController.mm */; };
+		8A97865816C4E6FA00AC95AF /* SelectAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97865016C4E6FA00AC95AF /* SelectAccountViewController.xib */; };
+		8A97865916C4E6FA00AC95AF /* TweetViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A97865216C4E6FA00AC95AF /* TweetViewController.mm */; };
+		8A97865A16C4E6FA00AC95AF /* TweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97865316C4E6FA00AC95AF /* TweetViewController.xib */; };
+		8A97865B16C4E6FA00AC95AF /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A97865516C4E6FA00AC95AF /* ViewController.mm */; };
+		8A97865C16C4E6FA00AC95AF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97865616C4E6FA00AC95AF /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,17 @@
 		8A97863D16C4E55400AC95AF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8A97864016C4E55400AC95AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		8A97864316C4E55400AC95AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		8A97864A16C4E6CD00AC95AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8A97864C16C4E6D600AC95AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		8A97864E16C4E6FA00AC95AF /* SelectAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAccountViewController.h; sourceTree = "<group>"; };
+		8A97864F16C4E6FA00AC95AF /* SelectAccountViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SelectAccountViewController.mm; sourceTree = "<group>"; };
+		8A97865016C4E6FA00AC95AF /* SelectAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectAccountViewController.xib; sourceTree = "<group>"; };
+		8A97865116C4E6FA00AC95AF /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
+		8A97865216C4E6FA00AC95AF /* TweetViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TweetViewController.mm; sourceTree = "<group>"; };
+		8A97865316C4E6FA00AC95AF /* TweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetViewController.xib; sourceTree = "<group>"; };
+		8A97865416C4E6FA00AC95AF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8A97865516C4E6FA00AC95AF /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		8A97865616C4E6FA00AC95AF /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A97864D16C4E6D600AC95AF /* Accounts.framework in Frameworks */,
+				8A97864B16C4E6CD00AC95AF /* Social.framework in Frameworks */,
 				8A97862216C4E55400AC95AF /* UIKit.framework in Frameworks */,
 				8A97862416C4E55400AC95AF /* Foundation.framework in Frameworks */,
 				8A97862616C4E55400AC95AF /* CoreGraphics.framework in Frameworks */,
@@ -61,6 +82,8 @@
 		8A97861516C4E55400AC95AF = {
 			isa = PBXGroup;
 			children = (
+				8A97864C16C4E6D600AC95AF /* Accounts.framework */,
+				8A97864A16C4E6CD00AC95AF /* Social.framework */,
 				8A97862716C4E55400AC95AF /* testSocialFramework */,
 				8A97862016C4E55400AC95AF /* Frameworks */,
 				8A97861F16C4E55400AC95AF /* Products */,
@@ -88,6 +111,15 @@
 		8A97862716C4E55400AC95AF /* testSocialFramework */ = {
 			isa = PBXGroup;
 			children = (
+				8A97864E16C4E6FA00AC95AF /* SelectAccountViewController.h */,
+				8A97864F16C4E6FA00AC95AF /* SelectAccountViewController.mm */,
+				8A97865016C4E6FA00AC95AF /* SelectAccountViewController.xib */,
+				8A97865116C4E6FA00AC95AF /* TweetViewController.h */,
+				8A97865216C4E6FA00AC95AF /* TweetViewController.mm */,
+				8A97865316C4E6FA00AC95AF /* TweetViewController.xib */,
+				8A97865416C4E6FA00AC95AF /* ViewController.h */,
+				8A97865516C4E6FA00AC95AF /* ViewController.mm */,
+				8A97865616C4E6FA00AC95AF /* ViewController.xib */,
 				8A97863016C4E55400AC95AF /* AppDelegate.h */,
 				8A97863116C4E55400AC95AF /* AppDelegate.m */,
 				8A97863916C4E55400AC95AF /* MasterViewController.h */,
@@ -172,6 +204,9 @@
 				8A97863816C4E55400AC95AF /* Default-568h@2x.png in Resources */,
 				8A97864116C4E55400AC95AF /* MasterViewController.xib in Resources */,
 				8A97864416C4E55400AC95AF /* DetailViewController.xib in Resources */,
+				8A97865816C4E6FA00AC95AF /* SelectAccountViewController.xib in Resources */,
+				8A97865A16C4E6FA00AC95AF /* TweetViewController.xib in Resources */,
+				8A97865C16C4E6FA00AC95AF /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +221,9 @@
 				8A97863216C4E55400AC95AF /* AppDelegate.m in Sources */,
 				8A97863B16C4E55400AC95AF /* MasterViewController.m in Sources */,
 				8A97863E16C4E55400AC95AF /* DetailViewController.m in Sources */,
+				8A97865716C4E6FA00AC95AF /* SelectAccountViewController.mm in Sources */,
+				8A97865916C4E6FA00AC95AF /* TweetViewController.mm in Sources */,
+				8A97865B16C4E6FA00AC95AF /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
