@@ -127,7 +127,7 @@
 		NSLog(@"error:アカウントタイプ未設定");
 		return;
 	}
-	ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+	ACAccountStore *accountStore = [[[ACAccountStore alloc] init] autorelease];
 	ACAccount *accountTwitter = [accountStore accountWithIdentifier:self.strID];
 	NSLog(@"%@", strTweet);
 	
