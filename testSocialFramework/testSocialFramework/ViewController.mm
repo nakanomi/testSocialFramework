@@ -30,10 +30,10 @@ const float alphaOfEnable = 1.0f;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidBecomeActive)
-                                                 name:@"applicationDidBecomeActive"
-                                               object:nil];
+	//設定画面から戻ってきたときなどのため
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidBecomeActive)
+												 name:UIApplicationDidBecomeActiveNotification object:nil];
 	giveUp = NO;
 }
 
@@ -54,7 +54,7 @@ const float alphaOfEnable = 1.0f;
 - (void)dealloc {
 	[_btnIdEnable release];
 	[_btnIdDisable release];
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"applicationDidBecomeActive" object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[_btnIdEnableCustom release];
 	[_segSelectSNS release];
 	[super dealloc];
