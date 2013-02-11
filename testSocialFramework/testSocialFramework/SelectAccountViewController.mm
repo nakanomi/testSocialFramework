@@ -10,6 +10,7 @@
 #import "TweetViewController.h"
 
 @interface SelectAccountViewController ()
+- (void)onGetAccounts;
 
 @end
 
@@ -96,9 +97,9 @@ enum {
 												[dictAccount setObject:strID forKey:strUserName];
 												[arrayName addObject:strUserName];
 											}
-											[self.tableView reloadData];
-											[activityView stopAnimating];
-											self.title = @"Select Account";
+											[self performSelectorOnMainThread:@selector(onGetAccounts)
+																   withObject:self
+																waitUntilDone:NO];
 										}
 										else {
 											NSString *strAlert = @"アカウントを取得できません";
@@ -216,6 +217,14 @@ enum {
 	}
 	return result;
 }
+#pragma mark -my Method
+- (void)onGetAccounts
+{
+	[self.tableView reloadData];
+	[activityView stopAnimating];
+	self.title = @"Select Account";
+}
+
 
 #pragma mark -get SNS type string
 
