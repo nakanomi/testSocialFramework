@@ -136,7 +136,7 @@
 	NSString *strServiceType = nil;
 	
 	if ([strAccountType isEqualToString:ACAccountTypeIdentifierTwitter]) {
-		url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"];
+		url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"];
 		params = [NSDictionary dictionaryWithObject:strTweet forKey:@"status"];
 		strServiceType = SLServiceTypeTwitter;
 	}
